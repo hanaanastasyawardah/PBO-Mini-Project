@@ -1,0 +1,56 @@
+package com.rental;
+
+import java.util.ArrayList;
+
+public class RentalService {
+    public ArrayList<Film> films;
+
+    // Constructor
+    public RentalService() {
+        films = new ArrayList<>();
+    }
+
+    // Method untuk menambah film (Create)
+    public void addFilm(Film film) {
+        films.add(film);
+    }
+
+    // Method untuk menampilkan semua film (Read)
+    public void displayFilms() {
+        System.out.println("Daftar Film:");
+        if (films.isEmpty()) {
+            System.out.println("Belum ada film di daftar.");
+        } else {
+            for (int i = 0; i < films.size(); i++) {
+                System.out.println(i + ". " + films.get(i).getTitle() + " (" + films.get(i).getGenre() + ")");
+            }
+        }
+    }
+
+    // Static method untuk menghitung total film (Read)
+    public static int totalFilms(ArrayList<Film> films) {
+        return films.size();
+    }
+
+    // Method untuk memperbarui film (Update)
+    public void updateFilm(int index, String newTitle, String newGenre) {
+        if (index >= 0 && index < films.size()) {
+            Film film = films.get(index);
+            film.setTitle(newTitle);
+            film.setGenre(newGenre);
+            System.out.println("Film di indeks " + index + " telah diperbarui.");
+        } else {
+            System.out.println("Indeks tidak valid.");
+        }
+    }
+
+    // Method untuk menghapus film (Delete)
+    public void deleteFilm(int index) {
+        if (index >= 0 && index < films.size()) {
+            films.remove(index);
+            System.out.println("Film di indeks " + index + " telah dihapus.");
+        } else {
+            System.out.println("Indeks tidak valid.");
+        }
+    }
+}
