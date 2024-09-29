@@ -1,0 +1,54 @@
+package com.rental;
+
+public class Film {
+    private String title;
+    private String genre;
+    private boolean isRented;
+
+    // Constructor
+    public Film(String title, String genre) {
+        this.title = title;
+        this.genre = genre;
+        this.isRented = false;
+    }
+
+    // Method untuk menyewa film
+    public void rentFilm() {
+        if (!isRented) {
+            isRented = true;
+            System.out.println("Film " + title + " telah disewa.");
+        } else {
+            System.out.println("Film " + title + " sudah disewa.");
+        }
+    }
+
+    // Method untuk mengembalikan film
+    public void returnFilm() {
+        if (isRented) {
+            isRented = false;
+            System.out.println("Film " + title + " telah dikembalikan.");
+        } else {
+            System.out.println("Film " + title + " tidak sedang disewa.");
+        }
+    }
+
+    // Getter untuk title
+    public String getTitle() {
+        return title;
+    }
+
+    // Setter untuk title
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    // Getter untuk genre
+    public String getGenre() {
+        return genre;
+    }
+
+    // Setter untuk genre
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+}
