@@ -124,6 +124,7 @@ Diminta untuk menginput indeks/nomor film yang ingin dikembalikan.
 
 Opsi 4 Customer:
 Keluar dari program.
+
 <img width="176" alt="Screenshot 2024-09-29 204152" src="https://github.com/user-attachments/assets/2163de64-7076-40ec-b385-2dd8701b2cde">
 
 Program Selesei.
