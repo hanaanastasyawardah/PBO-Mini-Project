@@ -1,4 +1,4 @@
-# PBO Mini Project 1
+# PBO Mini-Project/Posttest 1
 ## Nama: Hana Anastasya Wardah
 ## NIM: 230916012
 
@@ -10,6 +10,7 @@ Hanabi meminta tim pengembang untuk membuat Sistem Manajemen Penyewaan DVD yang 
 
 * Admin (pengelola toko): Memiliki kendali penuh untuk menambah, memperbarui, atau menghapus film dari sistem.
 * Customer (pelanggan): Dapat melihat daftar film yang tersedia, menyewa film, dan mengembalikan film.
+
 ### Tujuan Sistem
 * Admin: Memudahkan Hanabi dalam mengelola katalog film yang tersedia di toko. Admin dapat menambah film baru, memperbarui informasi film, atau menghapus film yang tidak tersedia.
 * Customer: Mempermudah pelanggan, seperti Abe, dalam memilih, menyewa, dan mengembalikan film.
@@ -39,7 +40,6 @@ Abe memutuskan untuk menyewa film "Inception". Ia memasukkan indeks film "Incept
 Setelah beberapa hari, Abe kembali dan mengembalikan film "Inception" melalui sistem. Film tersebut kini tersedia kembali untuk pelanggan lain.
 
 ## Validasi dan Keamanan:
-
 Sistem memverifikasi username dan password sebelum pengguna bisa mengakses fitur.
 Hanabi sebagai admin tidak bisa menyewa film, karena fitur ini hanya tersedia bagi pelanggan seperti Abe.
 Film yang disewa tidak bisa disewa oleh pelanggan lain hingga film tersebut dikembalikan.
@@ -60,8 +60,8 @@ Fitur Utama Sistem
 Efisiensi Pengelolaan: Sebelumnya, Hanabi harus mencatat film secara manual dan sering kali mengalami kesulitan dalam melacak ketersediaan film. Dengan sistem ini, film yang disewa atau dikembalikan langsung tercatat secara otomatis.
 Kemudahan Pelanggan: Abe dan pelanggan lain dapat memilih dan menyewa film dengan lebih cepat dan tanpa harus mengantri lama.
 Minim Kesalahan: Sistem meminimalisasi kesalahan manusia, seperti film disewa dua kali atau data film tidak diperbarui.
-## Kesimpulan<img width="112" alt="Screenshot 2024-09-29 203022" src="https://github.com/user-attachments/assets/62719d60-245a-4b2d-b58f-7fdadf0d1500">
 
+## Kesimpulan
 Sistem Manajemen Penyewaan DVD yang diterapkan di CineReel DVD mempermudah Hanabi dalam mengelola bisnis penyewaannya. Pelanggan seperti Abe dapat menyewa dan mengembalikan film dengan lebih mudah, sementara Hanabi memiliki kontrol penuh atas film yang tersedia di katalog.
 
 ### Cara Penggunaan 
@@ -73,7 +73,7 @@ Pada awal program akan ditampilkan menu untuk user pilih, yaitu Login Admin/Cust
 
 <img width="117" alt="Screenshot 2024-09-29 203036" src="https://github.com/user-attachments/assets/84df37d6-f3a0-4927-90b1-6ddbd04050b7">
 
-setelahnya masuk ke menu Admin
+setelah itu masuk ke menu Admin
 
 <img width="214" alt="Screenshot 2024-09-29 203044" src="https://github.com/user-attachments/assets/018991b4-58e5-454c-af6b-50f2f7ec2fa3">
 
@@ -107,6 +107,5 @@ Opsi 3 Customer:
 
 Opsi 4 Customer:
 <img width="176" alt="Screenshot 2024-09-29 204152" src="https://github.com/user-attachments/assets/2163de64-7076-40ec-b385-2dd8701b2cde">
-
 
 Program Selesei.
