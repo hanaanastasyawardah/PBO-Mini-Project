@@ -69,7 +69,7 @@ Pada awal program akan ditampilkan menu untuk user pilih, yaitu Login Admin/Cust
 
 <img width="112" alt="Screenshot 2024-09-29 203022" src="https://github.com/user-attachments/assets/62719d60-245a-4b2d-b58f-7fdadf0d1500">
 
-lalu jika user memilih Admin maka akan diminta memasukkan username dan password admin
+* jika user memilih Admin maka akan diminta memasukkan username dan password admin
 
 <img width="117" alt="Screenshot 2024-09-29 203036" src="https://github.com/user-attachments/assets/84df37d6-f3a0-4927-90b1-6ddbd04050b7">
 
@@ -92,7 +92,8 @@ Opsi 4 Admin:
 Opsi 5 Admin:
 <img width="187" alt="Screenshot 2024-09-29 203457" src="https://github.com/user-attachments/assets/825450b1-daea-450f-a4d9-4882ba4b405f">
 
-Login Customer maka akan diminta untuk memasukkan/input username dan password customer
+* Login Customer maka akan diminta untuk memasukkan/input username dan password customer
+  
 <img width="243" alt="Screenshot 2024-09-29 203742" src="https://github.com/user-attachments/assets/b97fa5cb-b11e-4649-8348-c311f837df86">
 
 Opsi 1 Customer:
