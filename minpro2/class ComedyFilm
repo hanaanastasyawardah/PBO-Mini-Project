@@ -1,0 +1,12 @@
+package com.rental;
+
+public final class ComedyFilm extends Film {
+    public ComedyFilm(String title, String genre) {
+        super(title, genre);
+    }
+
+    @Override
+    public String getGenre() {
+        return "Comedy: " + super.getGenre();
+    }
+}
