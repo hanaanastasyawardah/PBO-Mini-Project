@@ -1,0 +1,162 @@
+/**
+ *
+ * @author asus
+ */
+package com.main;
+
+import com.rental.Film;
+import com.rental.RentalService;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        RentalService rentalService = new RentalService();
+        try (Scanner scanner = new Scanner(System.in)) {
+            int choice;
+            
+            // Menambahkan beberapa film awal ke dalam daftar (Record Data Awal)
+            rentalService.addFilm(new Film("Extraction", "Action") {});
+            rentalService.addFilm(new Film("Agak Laen", "Comedy") {});
+            rentalService.addFilm(new Film("While You Were Sleeping", "Drama") {});
+            rentalService.addFilm(new Film("Evil Dead Rise", "Horror") {});
+            rentalService.addFilm(new Film("Interstellar", "Sci-Fi") {});
+            
+            // Username dan password yang valid
+            final String ADMIN_USERNAME = "admin";
+            final String ADMIN_PASSWORD = "admin123";
+            final String CUSTOMER_USERNAME = "customer";
+            final String CUSTOMER_PASSWORD = "cust123";
+            
+            // Pilihan login
+            System.out.println("=== Pilihan Login ===");
+            System.out.println("1. Admin");
+            System.out.println("2. Customer");
+            System.out.print("Pilih opsi: ");
+            int roleChoice = scanner.nextInt();
+            scanner.nextLine();  // Menerima newline
+            switch (roleChoice) {
+                case 1 ->                 {
+                    // Autentikasi untuk Admin
+                    System.out.println("=== Login Admin ===");
+                    System.out.print("Username: ");
+                    String username = scanner.nextLine();
+                    System.out.print("Password: ");
+                    String password = scanner.nextLine();
+                    if (username.equals(ADMIN_USERNAME) && password.equals(ADMIN_PASSWORD)) {
+                        // Menu untuk Admin
+                        do {
+                            System.out.println("\n=== Sistem Manajemen Penyewaan DVD (Admin) ===");
+                            System.out.println("1. Tambah Film");
+                            System.out.println("2. Tampilkan Daftar Film");
+                            System.out.println("3. Update Film");
+                            System.out.println("4. Hapus Film");
+                            System.out.println("5. Keluar");
+                            System.out.print("Pilih opsi: ");
+                            choice = scanner.nextInt();
+                            scanner.nextLine();  // Menerima newline
+                            
+                            switch (choice) {
+                                case 1 -> {
+                                    // Tambah Film (Admin Only)
+                                    System.out.print("Masukkan judul film: ");
+                                    String title = scanner.nextLine();
+                                    System.out.print("Masukkan genre film: ");
+                                    String genre = scanner.nextLine();
+                                    rentalService.addFilm(new Film(title, genre) {});
+                                    System.out.println("Film berhasil ditambahkan.");
+                                }
+                                
+                                case 2 -> // Tampilkan Daftar Film
+                                    rentalService.displayFilms();
+                                    
+                                case 3 -> {
+                                    // Update Film (Admin Only)
+                                    System.out.print("Masukkan indeks film yang ingin diupdate: ");
+                                    int updateIndex = scanner.nextInt();
+                                    scanner.nextLine();  // Menerima newline
+                                    System.out.print("Masukkan judul baru: ");
+                                    String newTitle = scanner.nextLine();
+                                    System.out.print("Masukkan genre baru: ");
+                                    String newGenre = scanner.nextLine();
+                                    rentalService.updateFilm(updateIndex, newTitle, newGenre);
+                                }
+                                
+                                case 4 -> {
+                                    // Hapus Film (Admin Only)
+                                    System.out.print("Masukkan indeks film yang ingin dihapus: ");
+                                    int deleteIndex = scanner.nextInt();
+                                    rentalService.deleteFilm(deleteIndex);
+                                }
+                                
+                                case 5 -> // Keluar
+                                    System.out.println("Terima kasih telah menggunakan sistem.");
+                                    
+                                default -> System.out.println("Opsi tidak valid. Silakan coba lagi.");
+                            }
+                        } while (choice != 5);
+                        
+                    } else {
+                        System.out.println("Username atau password salah. Silakan coba lagi.");
+                    }                      }
+                case 2 ->                 {
+                    // Autentikasi untuk Customer
+                    System.out.println("=== Login Customer ===");
+                    System.out.print("Username: ");
+                    String username = scanner.nextLine();
+                    System.out.print("Password: ");
+                    String password = scanner.nextLine();
+                    if (username.equals(CUSTOMER_USERNAME) && password.equals(CUSTOMER_PASSWORD)) {
+                        // Menu untuk Customer
+                        do {
+                            System.out.println("\n=== Sistem Manajemen Penyewaan DVD (Customer) ===");
+                            System.out.println("1. Tampilkan Daftar Film");
+                            System.out.println("2. Sewa Film");
+                            System.out.println("3. Kembalikan Film");
+                            System.out.println("4. Keluar");
+                            System.out.print("Pilih opsi: ");
+                            choice = scanner.nextInt();
+                            scanner.nextLine();  // Menerima newline
+                            
+                            switch (choice) {
+                                case 1 -> // Tampilkan Daftar Film
+                                    rentalService.displayFilms();
+                                    
+                                case 2 -> {
+                                    // Sewa Film (Customer Only)
+                                    System.out.print("Masukkan indeks film yang ingin disewa: ");
+                                    int rentIndex = scanner.nextInt();
+                                    if (rentIndex >= 0 && rentIndex < rentalService.films.size()) {
+                                        rentalService.films.get(rentIndex).rentFilm();
+                                    } else {
+                                        System.out.println("Indeks film tidak valid.");
+                                    }
+                                }
+                                
+                                case 3 -> {
+                                    // Kembalikan Film (Customer Only)
+                                    System.out.print("Masukkan indeks film yang ingin dikembalikan: ");
+                                    int returnIndex = scanner.nextInt();
+                                    if (returnIndex >= 0 && returnIndex < rentalService.films.size()) {
+                                        rentalService.films.get(returnIndex).returnFilm();
+                                    } else {
+                                        System.out.println("Indeks film tidak valid.");
+                                    }
+                                }
+                                
+                                case 4 -> // Keluar
+                                    System.out.println("Terima kasih telah menggunakan sistem.");
+                                    
+                                default -> System.out.println("Opsi tidak valid. Silakan coba lagi.");
+                            }
+                        } while (choice != 4);
+                        
+                    } else {
+                        System.out.println("Username atau password salah. Silakan coba lagi.");
+                    }                      }
+                default -> System.out.println("Opsi tidak valid. Silakan pilih admin atau customer.");
+            }
+        }
+    }
+}
+
