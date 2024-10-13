@@ -1,0 +1,14 @@
+package com.rental;
+
+public final class ActionFilm extends Film {
+    public ActionFilm(String title, String genre) {
+        super(title, genre);
+    }
+
+    @Override
+    public String getGenre() {
+        return "Action: " + super.getGenre();
+    }
+}
+
+
