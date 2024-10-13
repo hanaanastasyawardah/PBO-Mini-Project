@@ -1,0 +1,8 @@
+Package com.rental;
+
+public interface CRUD {
+    void addFilm(Film film);
+    void displayFilms();
+    void updateFilm(int index, String newTitle, String newGenre);
+    void deleteFilm(int index);
+}
