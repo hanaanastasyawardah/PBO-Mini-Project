@@ -2,7 +2,7 @@
 ## Nama: Hana Anastasya Wardah
 ## NIM: 230916012
 
-## Studi Kasus: Sistem Manajemen Penyewaan DVD - CineReel DVD
+## Studi Kasus: Sistem Manajemen Penyewaan DVD/Film - CineReel DVD
 ### Latar Belakang
 Perusahaan rental film CineReel DVD yang dikelola oleh Hanabi telah beroperasi selama beberapa tahun dengan cara manual. Pelanggan datang ke toko untuk memilih film dan mengisi formulir penyewaan secara tertulis. Namun, Hanabi ingin memodernisasi sistem penyewaan DVD-nya agar lebih efisien dan dapat mengurangi kesalahan manusia.
 
@@ -50,6 +50,7 @@ Fitur Utama Sistem
 2. Menghapus film yang tidak tersedia.
 3. Mengupdate informasi film.
 4. Melihat daftar film yang tersedia.
+
 * Customer:
 
 1. Melihat daftar film yang bisa disewa.
@@ -127,4 +128,4 @@ Keluar dari program.
 
 <img width="176" alt="Screenshot 2024-09-29 204152" src="https://github.com/user-attachments/assets/2163de64-7076-40ec-b385-2dd8701b2cde">
 
-Program Selesei.
+Program Selesai. 
