@@ -43,6 +43,23 @@ Setelah beberapa hari, Abe kembali dan mengembalikan film "Inception" melalui si
 Sistem memverifikasi username dan password sebelum pengguna bisa mengakses fitur.
 Hanabi sebagai admin tidak bisa menyewa film, karena fitur ini hanya tersedia bagi pelanggan seperti Abe.
 Film yang disewa tidak bisa disewa oleh pelanggan lain hingga film tersebut dikembalikan.
+
+## Penambahan Materi untuk Mini Project/posttest 2
+### Inheritance (Pewarisan):
+Class ActionFilm dan ComedyFilm merupakan subclass dari class abstrak Film. Ini berarti kedua class tersebut mewarisi properti dan metode dari class Film, namun dapat menambahkan atau memodifikasi fungsionalitas spesifiknya.
+
+### Encapsulation (Enkapsulasi):
+Encapsulation diterapkan dengan cara menggunakan getter dan setter di dalam class Film. Properti seperti title dan genre disimpan sebagai private, sehingga akses ke properti tersebut hanya bisa dilakukan melalui metode getter dan setter.
+
+### Abstraction (Abstraksi):
+Class Film diubah menjadi class abstrak karena class ini bersifat umum dan tidak perlu diinstansiasi secara langsung. Subclass seperti ActionFilm dan ComedyFilm yang mengimplementasikan fungsionalitas spesifik.
+
+### Interface (Penggunaan Interface untuk CRUD):
+Interface CRUD digunakan untuk mendefinisikan operasi CRUD (Create, Read, Update, Delete) yang kemudian diimplementasikan oleh class RentalService. Interface ini menjamin bahwa class yang mengimplementasikannya harus menyediakan fungsi untuk setiap operasi CRUD.
+
+### Final Keyword:
+Penggunaan keyword final diterapkan pada variabel ADMIN_USERNAME, ADMIN_PASSWORD, CUSTOMER_USERNAME, dan CUSTOMER_PASSWORD untuk memastikan bahwa nilai dari variabel ini tidak dapat diubah setelah diinisialisasi. Ini juga memastikan keamanan terhadap nilai tetap (constant).
+
 Fitur Utama Sistem
 * Admin:
 
@@ -65,14 +82,15 @@ Minim Kesalahan: Sistem meminimalisasi kesalahan manusia, seperti film disewa du
 ## Kesimpulan
 Sistem Manajemen Penyewaan DVD yang diterapkan di CineReel DVD mempermudah Hanabi dalam mengelola bisnis penyewaannya. Pelanggan seperti Abe dapat menyewa dan mengembalikan film dengan lebih mudah, sementara Hanabi memiliki kontrol penuh atas film yang tersedia di katalog.
 
-### Cara Penggunaan 
+### Cara Penggunaan program
 Pada awal program akan ditampilkan menu untuk user pilih, yaitu Login Admin/Customer
-
-<img width="112" alt="Screenshot 2024-09-29 203022" src="https://github.com/user-attachments/assets/62719d60-245a-4b2d-b58f-7fdadf0d1500">
 
 * jika user memilih Admin maka akan diminta memasukkan username dan password admin
 
-<img width="117" alt="Screenshot 2024-09-29 203036" src="https://github.com/user-attachments/assets/84df37d6-f3a0-4927-90b1-6ddbd04050b7">
+
+<img width="232" alt="Screenshot 2024-10-14 153738" src="https://github.com/user-attachments/assets/dffe6bc5-c288-4dd0-8845-dcf31f03d106">
+
+
 
 setelah itu masuk ke menu Admin
 
@@ -81,27 +99,36 @@ setelah itu masuk ke menu Admin
 Opsi 1 Admin:
 Diminta menginput nama dan genre film baru.
 
-<img width="150" alt="Screenshot 2024-09-29 203105" src="https://github.com/user-attachments/assets/14881431-b042-4190-b56a-56fb1e5ae3ab">
+<img width="229" alt="Screenshot 2024-10-14 153809" src="https://github.com/user-attachments/assets/879b107e-c4b2-46c5-b902-3a8e4ba4a803">
+
 
 Opsi 2 Admin:
 Menampilkan semua daftar film yang ada.
 
-<img width="103" alt="Screenshot 2024-09-29 203116" src="https://github.com/user-attachments/assets/9ed8849b-855d-4b90-a4d8-7e99a48639e4">
+<img width="229" alt="Screenshot 2024-10-14 153821" src="https://github.com/user-attachments/assets/86e0a91b-62e5-4398-a36a-c76f6b38695d">
+
 
 Opsi 3 Admin:
 Diminta menginput indeks/nomor film, judul baru, dan genre baru.
 
-<img width="211" alt="Screenshot 2024-09-29 203428" src="https://github.com/user-attachments/assets/0f4c5572-9c36-4a15-81e8-ece50fed4156">
+<img width="235" alt="Screenshot 2024-10-14 153919" src="https://github.com/user-attachments/assets/89e6ae86-c3e6-425c-a388-31474223465f">
+
+Setelah di update:
+
+<img width="232" alt="Screenshot 2024-10-14 153932" src="https://github.com/user-attachments/assets/d853a30e-da5b-4728-b0cd-63f84a33af35">
+
 
 Opsi 4 Admin:
 Diminta untuk menginput indeks/nomor film yang ingin di hapus
 
-<img width="205" alt="Screenshot 2024-09-29 203440" src="https://github.com/user-attachments/assets/daf829c4-faab-4e8b-9e4e-8e6c36545bd9">
+<img width="231" alt="Screenshot 2024-10-14 153945" src="https://github.com/user-attachments/assets/093031ec-128e-43a0-8fa3-b08272ed93a2">
+
 
 Opsi 5 Admin:
 Keluar dari program.
 
-<img width="187" alt="Screenshot 2024-09-29 203457" src="https://github.com/user-attachments/assets/825450b1-daea-450f-a4d9-4882ba4b405f">
+<img width="336" alt="Screenshot 2024-10-14 154001" src="https://github.com/user-attachments/assets/0c632eed-d86a-4634-9e96-6111e0b0c510">
+
 
 * Login Customer maka akan diminta untuk memasukkan/input username dan password customer
   jika berhasil maka, akan masuk ke menu utama customer
