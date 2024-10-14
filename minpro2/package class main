@@ -1,7 +1,3 @@
-/**
- *
- * @author asus
- */
 package com.main;
 
 import com.rental.Film;
@@ -23,15 +19,20 @@ public class Main {
             rentalService.addFilm(new Film("Interstellar", "Sci-Fi") {});
             
             // Username dan password yang valid
-            final String ADMIN_USERNAME = "admin";
-            final String ADMIN_PASSWORD = "admin123";
-            final String CUSTOMER_USERNAME = "customer";
-            final String CUSTOMER_PASSWORD = "cust123";
+            final String ADMIN_USERNAME = "hana";
+            final String ADMIN_PASSWORD = "hana12";
+            final String CUSTOMER_USERNAME = "abe";
+            final String CUSTOMER_PASSWORD = "abe12";
             
             // Pilihan login
+            System.out.println("=====================");
             System.out.println("=== Pilihan Login ===");
-            System.out.println("1. Admin");
-            System.out.println("2. Customer");
+            System.out.println("=====================");
+            System.out.println("=                   =");
+            System.out.println("=[1] ADMIN          =");
+            System.out.println("=[2] CUSTOMER       =");
+            System.out.println("=                   =");
+            System.out.println("=====================");
             System.out.print("Pilih opsi: ");
             int roleChoice = scanner.nextInt();
             scanner.nextLine();  // Menerima newline
@@ -46,12 +47,17 @@ public class Main {
                     if (username.equals(ADMIN_USERNAME) && password.equals(ADMIN_PASSWORD)) {
                         // Menu untuk Admin
                         do {
+                            System.out.println("================================================");
                             System.out.println("\n=== Sistem Manajemen Penyewaan DVD (Admin) ===");
-                            System.out.println("1. Tambah Film");
-                            System.out.println("2. Tampilkan Daftar Film");
-                            System.out.println("3. Update Film");
-                            System.out.println("4. Hapus Film");
-                            System.out.println("5. Keluar");
+                            System.out.println("================================================");
+                            System.out.println("=                                              =");
+                            System.out.println("=[1] Tambah Film                               =");
+                            System.out.println("=[2] Tampilkan Daftar Film                     =");
+                            System.out.println("=[3] Update Film                               =");
+                            System.out.println("=[4] Hapus Film                                =");
+                            System.out.println("=[5] Keluar                                    =");
+                            System.out.println("=                                              =");
+                            System.out.println("================================================");
                             System.out.print("Pilih opsi: ");
                             choice = scanner.nextInt();
                             scanner.nextLine();  // Menerima newline
@@ -110,10 +116,13 @@ public class Main {
                         // Menu untuk Customer
                         do {
                             System.out.println("\n=== Sistem Manajemen Penyewaan DVD (Customer) ===");
-                            System.out.println("1. Tampilkan Daftar Film");
-                            System.out.println("2. Sewa Film");
-                            System.out.println("3. Kembalikan Film");
-                            System.out.println("4. Keluar");
+                            System.out.println("=                                                 =");
+                            System.out.println("=[1] Tampilkan Daftar Film                         =");
+                            System.out.println("=[2] Sewa Film                                     =");
+                            System.out.println("=[3] Kembalikan Film                               =");
+                            System.out.println("=[4] Keluar                                        =");
+                            System.out.println("=                                                 =");
+                            System.out.println("===================================================");
                             System.out.print("Pilih opsi: ");
                             choice = scanner.nextInt();
                             scanner.nextLine();  // Menerima newline
@@ -159,4 +168,3 @@ public class Main {
         }
     }
 }
-
