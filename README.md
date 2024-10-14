@@ -1,4 +1,4 @@
-# PBO Mini-Project/Posttest 1
+# PBO Mini-Project/Posttest 1-2
 ## Nama: Hana Anastasya Wardah
 ## NIM: 230916012
 
